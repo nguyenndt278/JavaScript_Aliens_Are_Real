@@ -1,46 +1,49 @@
-// Assign the data from `data.js` to a descriptive variable
-var people = data;
-
-// Select the button
+var ufos = data;
+var tbody= d3.select("tbody");
 var button = d3.select("#button");
 
 button.on("click", function() {
+  var inputValue = d3.select("#date-input").property("value");
+  var filteredData = ufos.filter(ufo => ufo.datetime === inputValue);
 
-  // Select the input element and get the raw HTML node
-  var inputElement = d3.select("#patient-form-input");
+  d3.event.preventDefault();
 
-  // Get the value property of the input element
-  var inputValue = inputElement.property("value");
+  filteredData.forEach((data) => {
+    var row=tbody.append("tr");
+    Object.entries(data).forEach(([key, value]) => {
+      var cell=row.append("td");
+      cell.text(value);
+    });
+  });
 
-  console.log(inputValue);
-  console.log(people);
+  var inputCity= d3.select("#city-input").property("value");
+  var filteredCity= ufos.filter(ufo => ufo.city === inputCity);
 
-  var filteredData = people.filter(person => person.bloodType === inputValue);
+  filteredCity.forEach((city) => {
+    var row1=tbody.append("tr");
+    Object.entries(city).forEach(([key, value]) => {
+      var cell1=row1.append("td");
+      cell1.text(value);
+    });
+  });
 
-  console.log(filteredData);
 
-  // BONUS: Calculate summary statistics for the age field of the filtered data
+});
 
-  // First, create an array with just the age values
-  var ages = filteredData.map(person => person.age);
+var date_only=d3.select("#choose_date");
+date_only.on("click", function() {
+  var inputValue = d3.select("#date-input").property("value");
+  var filteredData = ufos.filter(ufo => ufo.datetime === inputValue);
 
-  // Next, use math.js to calculate the mean, median, mode, var, and std of the ages
-  var mean = math.mean(ages);
-  var median = math.median(ages);
-  var mode = math.mode(ages);
-  var variance = math.var(ages);
-  var standardDeviation = math.std(ages);
+  d3.event.preventDefault();
 
-  // Then, select the unordered list element by class name
-  var list = d3.select(".summary");
+  filteredData.forEach((data) => {
+    var row=tbody.append("tr");
+    Object.entries(data).forEach(([key, value]) => {
+      var cell=row.append("td");
+      cell.text(value);
+    });
+  });
 
-  // remove any children from the list to
-  list.html("");
 
-  // append stats to the list
-  list.append("li").text(`Mean: ${mean}`);
-  list.append("li").text(`Median: ${median}`);
-  list.append("li").text(`Mode: ${mode}`);
-  list.append("li").text(`Variance: ${variance}`);
-  list.append("li").text(`Standard Deviation: ${standardDeviation}`);
 });
