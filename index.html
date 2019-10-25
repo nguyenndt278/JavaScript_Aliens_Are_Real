@@ -14,41 +14,50 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-3"></div>
+      <div class="col-md-3"></div>
+      <div class="col-md-3">
+          <div class="container">
+              <div class="dropdown dropright">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" id="select-date" href="#">Date</a>
+                  <a class="dropdown-item" id="select-city" href="#">City</a>
+                  <a class="dropdown-item" id="select-state" href="#">State</a>
+                  <a class="dropdown-item" id="select-country" href="#">Country</a>
+                  <a class="dropdown-item" id="select-shape" href="#">Shape</a>
+                </div>
+              </div>
+            </div>
+      </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-3"></div>
+      <div class="col-sm-6 col-md-3"></div>
+      <div class="col-sm-6 col-md-3">
         <form>
-          <div class="form-group">
-            <label for="patient-form">Filter UFO Sightings by Date</label>
-            <input class="form-control" id="date-input" name="patient-form" type="text" placeholder="1/1/2010">
-          </div>
-          <div class="form-group">
-            <label for="patient-form">by City</label>
-            <input class="form-control" id="city-input" name="patient-form" type="text" placeholder="benton">
+          <div class="form-name">
+            <label id="name" for="patient-form">Filter</label>
+            <input class="form-control" id="date-input" name="patient-form" type="text" placeholder=" ">
           </div>
           <button id="button" type="button" class="btn btn-default">Enter</button>
         </form>
-
-        <form>
-          <select id="mySelect">
-            <option>Date</option>
-            <option>City</option>
-            <option>State</option>
-            <option>Country</option>
-            <option>Shape</option>
-          </select>
-
-          </form>
-
-
+      </div>
+      </div>
+      </div>
 
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <h1>Filtered Sightings Summary</h1>
+        <h1>Sightings Summary</h1>
         <ul class="summary"></ul>
         <table>
           <thead>
-            <tr class="table-info table-bordered">
+            <tr class="table-info table-stripped">
               <th>Date</th>
               <th>City</th>
               <th>State</th>
@@ -66,5 +75,8 @@
 </body>
 <script src="data.js"></script>
 <script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </html>
