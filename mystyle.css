@@ -1,0 +1,15 @@
+.center {
+    text-align: center;
+}
+
+.aligns {
+    text-justify: auto;
+}
+
+.img {
+    float: left;
+}
+
+.space {
+    padding-left: 340px;
+}

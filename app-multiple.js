@@ -1,6 +1,6 @@
 var ufos = data;
 var tbody= d3.select("tbody");
-var button = d3.select("#button");
+var button = d3.select("#button_one");
 
 function allFilter() {
   var dateInput = d3.select("#date-input").property("value");
