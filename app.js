@@ -1,6 +1,7 @@
 var ufos = data;
 var tbody= d3.select("tbody");
 var button = d3.select("#button_one");
+var button_reset=d3.select("#button_reset");
 var select_date=d3.select("#select-date");
 var select_city=d3.select("#select-city");
 var select_state=d3.select("#select-state");
@@ -80,14 +81,13 @@ function shapeFilter() {
       var value_shape= capitalize(value)
       cell.text(value_shape);})})};
 
-// var a1= d3.select(".form-control").attr("placeholder");
-// console.log(a1);
-
-// var a2= d3.select("label").text();
-// console.log(a2);
-
+function reset()  {
+  d3.select("#date-input").property("value","");
+  d3.select(".summary").html("");
+}
 
 select_date.on("click", function(){
+  d3.select(".summary").html("");
   button.on("click", dateFilter);
   d3.select("h5").text("Filter by Date");
   d3.select(".form-control").attr("placeholder", "1/10/2010");
@@ -95,25 +95,35 @@ select_date.on("click", function(){
 });
 
 select_city.on("click", function(){
+  d3.select(".summary").html("");
   button.on("click", cityFilter);
   d3.select("h5").text("Filter by City");
   d3.select(".form-control").attr("placeholder", "benton");
+  d3.select("#date-input").property("value", "");
 });
 
 select_state.on("click", function(){
+  d3.select(".summary").html("");
   button.on("click", stateFilter);
   d3.select("h5").text("Filter by State");
   d3.select(".form-control").attr("placeholder", "ar");
+  d3.select("#date-input").property("value", "");
 });
 
 select_country.on("click", function(){
+  d3.select(".summary").html("");
   button.on("click", countryFilter);
   d3.select("h5").text("Filter by Country");
   d3.select(".form-control").attr("placeholder", "us");
+  d3.select("#date-input").property("value", "");
 });
 
 select_shape.on("click", function(){
+  d3.select(".summary").html("");
   button.on("click", shapeFilter);
   d3.select("h5").text("Filter by Shape");
   d3.select(".form-control").attr("placeholder", "circle");
+  d3.select("#date-input").property("value", "");
 });
+
+button_reset.on("click", reset);

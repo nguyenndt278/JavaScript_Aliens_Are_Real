@@ -1,6 +1,7 @@
 var ufos = data;
 var tbody= d3.select("tbody");
 var button = d3.select("#button_one");
+var button_reset=d3.select("#button_reset");
 
 function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -30,8 +31,14 @@ function allFilter() {
       var value_data= capitalize(value)
       cell.text(value_data);})})};
 
-button.on("click", allFilter);
+function reset()  {
+  d3.select("#date-input").property("value","");
+  d3.select("#city-input").property("value","");
+  d3.select("#state-input").property("value","");
+  d3.select("#country-input").property("value","");
+  d3.select("#shape-input").property("value","");
+  d3.select(".summary").html("");
+}
 
-// if (dateInput.length>=0) {
-//   button.
-// }
+button.on("click", allFilter);
+button_reset.on("click", reset);
