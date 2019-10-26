@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Aliens Are Real!</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="mystyle.css">
   <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
@@ -53,26 +55,26 @@
                 <h5 for="patient-form">Filter by Shape</h5>
                 <input class="form-control" id="shape-input" name="patient-form" type="text" placeholder="circle">
               </div>
-          <button id="button_one" type="button" class="btn btn-default">Enter</button>
-          <button id="button_reset" type="button" class="btn btn-default">Reset</button>
+          <button id="button_one" type="button" class="btn btn-success btn-outline-warning">Enter</button>
+          <button id="button_reset" type="button" class="btn btn-danger btn-outline-warning">Reset</button>
           </form>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <h2>Sighting Summary</h2>
+          <h2 class="center">Sighting Summary <i class='fas fa-eye' style='font-size:40px'></i></h2>
           <hr>
           <div class="summary">
-              <table class="table table-dark">
+              <table class="table table-striped">
                   <thead>
                     <tr>
-                      <th>Date</th>
-                      <th>City</th>
-                      <th>State</th>
-                      <th>Country</th>
-                      <th>Shape</th>
-                      <th>Duration</th>
-                      <th>Comments</th>
+                      <th class="center">Date</th>
+                      <th class="center">City</th>
+                      <th class="center">State</th>
+                      <th class="center">Country</th>
+                      <th class="center">Shape</th>
+                      <th class="center">Duration</th>
+                      <th class="center">Comments</th>
                     </tr>
                   </thead>
                   <tbody></tbody>
