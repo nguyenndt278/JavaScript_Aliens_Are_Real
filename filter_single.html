@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Aliens Are Real!</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="mystyle.css">
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
 </head>
@@ -33,8 +34,6 @@
         </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-3"></div>
       <div class="col-md-3">
           <div class="container">
               <div class="dropdown dropright">
@@ -50,33 +49,39 @@
                 </div>
               </div>
             </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
       </div>
-
   <div class="container">
-    <div class="row">
-      <div class="col-sm-6 col-md-3"></div>
-      <div class="col-sm-6 col-md-3"></div>
-      <div class="col-sm-6 col-md-3">
-        <form>
-          <div class="form-name">
-            <label id="name" for="patient-form">Filter</label>
-            <input class="form-control" id="date-input" name="patient-form" type="text" placeholder=" ">
+      <div class="row">
+          <div class="col-md-12">
+            <div class="white"><h2></h2></div>
           </div>
-          <button id="button_one" type="button" class="btn btn-default">Enter</button>
-        </form>
-      </div>
-      </div>
-      </div>
-
-      </div>
-    </div>
+        </div>
     <div class="row">
       <div class="col-md-12">
-        <h1>Sightings Summary</h1>
-        <ul class="summary"></ul>
+        <div class="box red">
+          <form>
+            <div class="form-name">
+              <h5 id="name" for="patient-form">Filter</h5>
+              <input class="form-control" id="date-input" name="patient-form" type="text" placeholder=" ">
+            </div>
+            <button id="button_one" type="button" class="btn btn-default">Enter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Sightings Summary</h2>
+        <hr>
+        <div class="summary"></div>
         <table>
           <thead>
-            <tr class="table-info table-stripped">
+            <tr class="table table-dark">
               <th>Date</th>
               <th>City</th>
               <th>State</th>
