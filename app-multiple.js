@@ -32,3 +32,6 @@ function allFilter() {
 
 button.on("click", allFilter);
 
+// if (dateInput.length>=0) {
+//   button.
+// }

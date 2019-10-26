@@ -8,13 +8,15 @@ var select_country=d3.select("#select-country");
 var select_shape=d3.select("#select-shape");
 
 function capitalize(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+  return string[0].toUpperCase() + string.slice(1);
 }
 
 function dateFilter() {
   var inputValue = d3.select("#date-input").property("value");
   var filteredData = ufos.filter(ufo => ufo.datetime === inputValue);
   d3.event.preventDefault();
+  var list = d3.select(".summary");
+  list.html("");
   filteredData.forEach((data) => {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
@@ -27,6 +29,8 @@ function cityFilter() {
   var inputValue1=inputValue.toString().toLowerCase();
   var filteredData = ufos.filter(ufo => ufo.city === inputValue1);
   d3.event.preventDefault();
+  var list = d3.select(".summary");
+  list.html("");
   filteredData.forEach((data) => {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
@@ -39,6 +43,8 @@ function stateFilter() {
   var inputValue1=inputValue.toString().toLowerCase();
   var filteredData = ufos.filter(ufo => ufo.state === inputValue1);
   d3.event.preventDefault();
+  var list = d3.select(".summary");
+  list.html("");
   filteredData.forEach((data) => {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
@@ -51,6 +57,8 @@ function countryFilter() {
   var inputValue1=inputValue.toString().toLowerCase();
   var filteredData = ufos.filter(ufo => ufo.country === inputValue1);
   d3.event.preventDefault();
+  var list = d3.select(".summary");
+  list.html("");
   filteredData.forEach((data) => {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
@@ -63,6 +71,8 @@ function shapeFilter() {
   var inputValue1=inputValue.toString().toLowerCase();
   var filteredData = ufos.filter(ufo => ufo.shape === inputValue1);
   d3.event.preventDefault();
+  var list = d3.select(".summary");
+  list.html("");
   filteredData.forEach((data) => {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
@@ -81,6 +91,7 @@ select_date.on("click", function(){
   button.on("click", dateFilter);
   d3.select("h5").text("Filter by Date");
   d3.select(".form-control").attr("placeholder", "1/10/2010");
+  d3.select("#date-input").property("value", "");
 });
 
 select_city.on("click", function(){
