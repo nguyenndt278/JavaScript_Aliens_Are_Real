@@ -9,7 +9,7 @@ var select_country=d3.select("#select-country");
 var select_shape=d3.select("#select-shape");
 
 function capitalize(string) {
-  return string[0].toUpperCase() + string.slice(1);
+  return charAt(0).toUpperCase() + string.slice(1);
 }
 
 function dateFilter() {
@@ -22,8 +22,8 @@ function dateFilter() {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
       var cell=row.append("td");
-      var value_date= capitalize(value)
-      cell.text(value_date);})})};
+      // var value_date= (value);
+      cell.text(value);})})};
 
 function cityFilter() {
   var inputValue = d3.select("#date-input").property("value");
@@ -36,8 +36,7 @@ function cityFilter() {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
       var cell=row.append("td");
-      var value_city= capitalize(value)
-      cell.text(value_city);})})};
+      cell.text(value);})})};
 
 function stateFilter() {
   var inputValue = d3.select("#date-input").property("value");
@@ -50,8 +49,7 @@ function stateFilter() {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
       var cell=row.append("td");
-      var value_state= capitalize(value)
-      cell.text(value_state);})})};
+      cell.text(value);})})};
 
 function countryFilter() {
   var inputValue = d3.select("#date-input").property("value");
@@ -64,8 +62,8 @@ function countryFilter() {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
       var cell=row.append("td");
-      var value_country= capitalize(value)
-      cell.text(value_country);})})};
+      // var value_country= (value);
+      cell.text(value);})})};
 
 function shapeFilter() {
   var inputValue = d3.select("#date-input").property("value");
@@ -78,8 +76,8 @@ function shapeFilter() {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
       var cell=row.append("td");
-      var value_shape= capitalize(value)
-      cell.text(value_shape);})})};
+      // var value_shape= (value);
+      cell.text(value);})})};
 
 function reset()  {
   d3.select("#date-input").property("value","");

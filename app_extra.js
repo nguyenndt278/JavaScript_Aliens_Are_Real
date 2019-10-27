@@ -14,7 +14,7 @@ function welcome_charles() {
 
 function welcome_none() {
     alert ("Hello stranger!");
-    d3.select(".giphy-me").html("<img src='construction.png' alt 'Under construction'>");
+    d3.select(".giphy-me").html("<div class='container'><div class='row'><div class='col-md-12'><nav class='navbar navbar-expand-md bg-info navbar-dark'><a class='navbar-brand' href='index.html'>Home</a></nav></div></div></div><img src='construction.png' alt 'Under construction'>");
 }
 
 jon.on("click", welcome_jon);
