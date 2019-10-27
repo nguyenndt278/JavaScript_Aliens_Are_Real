@@ -82,7 +82,11 @@ function reset()  {
 };
 
 select_date.on("click", function(){
+  d3.select(".summary").html("");
   button.on("click", dateFilter);
+  d3.select("h5").text("Filter by Date");
+  d3.select(".form-control").attr("placeholder", "1/1/2010");
+  d3.select("#date-input").property("value", "");
 });
 
 select_city.on("click", function(){
