@@ -22,8 +22,7 @@ function dateFilter() {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
       var cell=row.append("td");
-      // var value_date= (value);
-      cell.text(value);})})};
+      cell.text(value);})})}
 
 function cityFilter() {
   var inputValue = d3.select("#date-input").property("value");
@@ -62,7 +61,6 @@ function countryFilter() {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
       var cell=row.append("td");
-      // var value_country= (value);
       cell.text(value);})})};
 
 function shapeFilter() {
@@ -76,20 +74,15 @@ function shapeFilter() {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
       var cell=row.append("td");
-      // var value_shape= (value);
       cell.text(value);})})};
 
 function reset()  {
   d3.select("#date-input").property("value","");
   d3.select(".summary").html("");
-}
+};
 
 select_date.on("click", function(){
-  d3.select(".summary").html("");
   button.on("click", dateFilter);
-  d3.select("h5").text("Filter by Date");
-  d3.select(".form-control").attr("placeholder", "1/10/2010");
-  d3.select("#date-input").property("value", "");
 });
 
 select_city.on("click", function(){

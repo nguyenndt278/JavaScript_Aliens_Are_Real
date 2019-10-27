@@ -28,8 +28,7 @@ function allFilter() {
     var row=tbody.append("tr");
     Object.entries(data).forEach(([key, value]) => {
       var cell=row.append("td");
-      var value_data= capitalize(value)
-      cell.text(value_data);})})};
+      cell.text(value);})})};
 
 function reset()  {
   d3.select("#date-input").property("value","");
