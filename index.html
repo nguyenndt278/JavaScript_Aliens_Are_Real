@@ -7,9 +7,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="mystyle.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -17,25 +15,38 @@
     <h1>Are Aliens Real? <i class='fas fa-user-secret' style='font-size:48px;color:red'></i></h1>      
     <p>Welcome to Alien Class 101 where we reveal the truth about UFO sightings to the world!</p>
   </div>
+
+<div>
+</div>
+
+<div class="giphy-me">
 <div class="container aligns">
   <img class="img" src="img_ufo.png" class="rounded" alt="UFO Image">
   <p>We here at "ALIENS-R-REAL" have collected all of the eye-witness reports in 2010 across multiple locations regarding UFO Sightings. Now, it is time for the Planet Earth to know what we have found.</p>      
   <p>Our supper developers have created a tool to generate a report table dynamically based upon your specific needs.</p> 
-  <p>Click on <strong>"Filter by one factor"</strong> to filter UFO sighting report by either Date, City, State, Country, or Shape.</p> 
-  <p>Click on <strong>"Filter by multiple factors"</strong> to check out reports that meet all five filters.</p> 
-  <div class="container">  
-    <h2>Ready? Set, Go!</h2>    
-    <div class="row">
-      <div class="col-sm-6 bg-success center">
-        <h2><a href="filter_single.html">Filter by one factor</a></h2>
-      </div>
-      <div class="col-sm-6 bg-warning center">
-        <h2><a href="filter_multiple.html">Filter by multiple factors</a></h2>
+  <h3>For security purpose, we must ask you to:</h3>
+  <div class="container">
+    <div class="dropdown dropright">
+      <i class='fas fa-key' style='font-size:38px;color:green'></i>
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Declare yourself <i class='far fa-caret-square-right' style='font-size:14px'></i>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" id="jon" href="#">Jonathan <i class='fas fa-paw' style='font-size:20px;color:blueviolet'></i></a>
+        <a class="dropdown-item" id="charles" href="#">Charles <i class='fas fa-carrot' style='font-size:20px;color:rgb(32, 204, 152)'></i></a>
+        <a class="dropdown-item" id="none" href="#">None of the above<i class='fas fa-dragon' style='font-size:20px;color:blue'></i></a>
       </div>
     </div>
   </div>
+  
+  </div>
 </div>
 </div>
-    
+
+
+<script src="app_extra.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
