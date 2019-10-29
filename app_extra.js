@@ -25,7 +25,7 @@ function welcome_charles() {
 
 function welcome_none() {
     alert ("Hello stranger!");
-    d3.select(".giphy-me").html("<div class='container'><div class='row'><div class='col-md-12'><nav class='navbar navbar-expand-md bg-info navbar-dark'><a class='navbar-brand' href='index.html'>Home</a></nav></div></div></div><img class = 'img img-fluid' src='img_construction.png' alt 'Under construction'>");
+    d3.select(".giphy-me").html("<div class='container'><div class='row'><div class='col-md-6'><nav class='navbar navbar-expand-md bg-transparent navbar-dark'><a class='navbar-brand' href='index.html'>Home</a></nav></div></div></div><div class='tuna'></div>><div class='row'></div>");
 }
 
 function password_jon() {
@@ -57,9 +57,6 @@ function password_charles() {
         d3.select("#security_pass").property("value","");
     }
     }
-// function sendEmail () {
-//     window.open('mailto:thaonguyenagribank@gmail.com?subject=subject&body=body');
-// }
 
 function e() {
     Email.send({
@@ -75,7 +72,6 @@ function e() {
 );}
 
 
-jon.on("click", e);
+jon.on("click", welcome_jon);
 charles.on("click", welcome_charles);
 none.on("click", welcome_none);
-// none.on("click", e);
