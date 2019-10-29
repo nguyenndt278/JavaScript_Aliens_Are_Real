@@ -25,7 +25,7 @@ function welcome_charles() {
 
 function welcome_none() {
     alert ("Hello stranger!");
-    d3.select(".giphy-me").html("<div class='container'><div class='row'><div class='col-md-12'><nav class='navbar navbar-expand-md bg-info navbar-dark'><a class='navbar-brand' href='index.html'>Home</a></nav></div></div></div><img src='img_construction.png' alt 'Under construction'>");
+    d3.select(".giphy-me").html("<div class='container'><div class='row'><div class='col-md-12'><nav class='navbar navbar-expand-md bg-info navbar-dark'><a class='navbar-brand' href='index.html'>Home</a></nav></div></div></div><img class = 'img img-fluid' src='img_construction.png' alt 'Under construction'>");
 }
 
 function password_jon() {
@@ -66,7 +66,7 @@ function e() {
         Host : "smtp.elasticemail.com",
         Username : "thaonguyenagribank@gmail.com",
         Password : "c143563f-201d-43fc-a909-7538b7877c0f",
-        To : 'ndnguyen11@uh.edu',
+        To : 'ndnguyenfdgs',
         From : "thaonguyenagribank@gmail.com",
         Subject : "subject text",
         Body : "body text"
@@ -75,8 +75,7 @@ function e() {
 );}
 
 
-
-jon.on("click", welcome_jon);
+jon.on("click", e);
 charles.on("click", welcome_charles);
 none.on("click", welcome_none);
 // none.on("click", e);
